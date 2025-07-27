@@ -1,0 +1,47 @@
+{
+  "header": {
+    "name": "Evan Huynh",
+    "title": "Lärare • IT-entusiast"
+  },
+  "sections": {
+    "whoami": {
+      "title": "Vem är jag?",
+      "content": "Hej, mitt namn är Evan. Jag är en matematiklärare baserad i Sverige med en djup passion för datorer, problemlösning och livslångt lärande. Oavsett om det handlar om att bryta ner komplexa koncept eller utforska ny teknik, tror jag på en grundprincip: <strong>arkivera allt du ser</strong>. Varje utmaning, varje lösning, varje lektion, jag behandlar allt som kunskap värd att behålla och dela. Mitt mål är att hjälpa nästa generation att bygga inte bara färdigheter, utan ett tankesätt redo för världen framöver."
+    },
+    "education": {
+      "title": "Utbildning",
+      "items": [
+        "Linnéuniversitetet: Kandidatexamen i Matematik",
+        "Högskolan i Halmstad: Kandidatexamen i Ämneslärare i Matematik"
+      ]
+    },
+    "experience": {
+      "title": "Erfarenhet",
+      "content": "Uppdaterar..."
+    },
+    "project": {
+      "title": "Projekt",
+      "content": "Arbetar på..."
+    },
+    "cv": {
+      "title": "CV",
+      "content": "Kommer snart...",
+      "links": [
+        { "text": "Svenska CV", "href": "#", "title": "Svenska CV" },
+        { "text": "English CV", "href": "#", "title": "English CV" },
+        { "text": "CV tiếng Việt", "href": "#", "title": "Vietnamese CV" }
+      ]
+    },
+    "contact": {
+      "title": "Kontakt"
+    }
+  },
+  "ui": {
+    "language_switcher": "Språk",
+    "languages": {
+      "en": "English",
+      "sv": "Svenska", 
+      "vi": "Tiếng Việt"
+    }
+  }
+}

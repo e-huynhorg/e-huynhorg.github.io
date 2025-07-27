@@ -1,0 +1,47 @@
+{
+  "header": {
+    "name": "Evan Huynh",
+    "title": "Giáo viên • Người đam mê IT"
+  },
+  "sections": {
+    "whoami": {
+      "title": "Tôi là ai?",
+      "content": "Xin chào, tên tôi là Evan. Tôi là một giáo viên toán sống tại Thụy Điển với niềm đam mê sâu sắc về máy tính, giải quyết vấn đề và học tập suốt đời. Dù là phân tích các khái niệm phức tạp hay khám phá công nghệ mới, tôi tin vào một nguyên tắc cốt lõi: <strong>lưu trữ tất cả những gì bạn thấy</strong>. Mọi thách thức, mọi giải pháp, mọi bài học, tôi đều coi là kiến thức đáng giữ lại và chia sẻ. Mục tiêu của tôi là giúp thế hệ tiếp theo xây dựng không chỉ kỹ năng, mà còn là tư duy sẵn sàng cho tương lai."
+    },
+    "education": {
+      "title": "Học vấn",
+      "items": [
+        "Đại học Linnaeus: Cử nhân Khoa học Toán học",
+        "Đại học Halmstad: Cử nhân Sư phạm Toán học Trung học"
+      ]
+    },
+    "experience": {
+      "title": "Kinh nghiệm",
+      "content": "Đang cập nhật..."
+    },
+    "project": {
+      "title": "Dự án",
+      "content": "Đang thực hiện..."
+    },
+    "cv": {
+      "title": "CV",
+      "content": "Sắp có...",
+      "links": [
+        { "text": "Svenska CV", "href": "#", "title": "Swedish CV" },
+        { "text": "English CV", "href": "#", "title": "English CV" },
+        { "text": "CV tiếng Việt", "href": "#", "title": "Vietnamese CV" }
+      ]
+    },
+    "contact": {
+      "title": "Liên hệ"
+    }
+  },
+  "ui": {
+    "language_switcher": "Ngôn ngữ",
+    "languages": {
+      "en": "English",
+      "sv": "Svenska",
+      "vi": "Tiếng Việt"
+    }
+  }
+}
