@@ -1,0 +1,81 @@
+/* Progression page specific styles */
+
+/* Light mode styles */
+.archetype-warrior {
+    background-color: #ff4444;
+    color: white;
+}
+
+.archetype-magician {
+    background-color: #4dabf7;
+    color: white;
+}
+
+.archetype-archer {
+    background-color: #69db7c;
+    color: white;
+}
+
+.archetype-thief {
+    background-color: #da77f2;
+    color: white;
+}
+
+.archetype-pirate {
+    background-color: #bc8f8f;
+    color: white;
+}
+
+/* Links styling */
+#progressionTable a.progression-link {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+#progressionTable a.progression-link:first-child {
+    margin-left: 0;
+}
+
+#progressionTable a.progression-link:hover {
+    color: #005999;
+    text-decoration: underline;
+}
+
+/* Dark mode link styling */
+body.dark-mode #progressionTable a.progression-link {
+    color: #4dabf7;
+}
+
+body.dark-mode #progressionTable a.progression-link:hover {
+    color: #7fc3f7;
+}
+
+/* Dark mode styles */
+body.dark-mode .archetype-warrior {
+    background-color: #b30000;
+    color: white;
+}
+
+body.dark-mode .archetype-magician {
+    background-color: #1a8cff;
+    color: white;
+}
+
+body.dark-mode .archetype-archer {
+    background-color: #2ea745;
+    color: white;
+}
+
+body.dark-mode .archetype-thief {
+    background-color: #9933cc;
+    color: white;
+}
+
+body.dark-mode .archetype-pirate {
+    background-color: #8b6b6b;
+    color: white;
+}
