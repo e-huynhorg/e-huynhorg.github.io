@@ -20,28 +20,13 @@
       "content": "Uppdaterar..."
     },
     "project": {
-      "title": "Projekt",
-      "content": "Arbetar på..."
+      "title": "Projekt"
     },
     "cv": {
-      "title": "CV",
-      "content": "Kommer snart...",
-      "links": [
-        { "text": "Svenska CV", "href": "#", "title": "Svenska CV" },
-        { "text": "English CV", "href": "#", "title": "English CV" },
-        { "text": "CV tiếng Việt", "href": "#", "title": "Vietnamese CV" }
-      ]
+      "title": "CV"
     },
     "contact": {
       "title": "Kontakt"
-    }
-  },
-  "ui": {
-    "language_switcher": "Språk",
-    "languages": {
-      "en": "English",
-      "sv": "Svenska", 
-      "vi": "Tiếng Việt"
     }
   }
 }

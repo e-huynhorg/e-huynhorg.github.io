@@ -20,28 +20,13 @@
       "content": "Đang cập nhật..."
     },
     "project": {
-      "title": "Dự án",
-      "content": "Đang thực hiện..."
+      "title": "Dự án"
     },
     "cv": {
-      "title": "CV",
-      "content": "Sắp có...",
-      "links": [
-        { "text": "Svenska CV", "href": "#", "title": "Swedish CV" },
-        { "text": "English CV", "href": "#", "title": "English CV" },
-        { "text": "CV tiếng Việt", "href": "#", "title": "Vietnamese CV" }
-      ]
+      "title": "CV"
     },
     "contact": {
       "title": "Liên hệ"
-    }
-  },
-  "ui": {
-    "language_switcher": "Ngôn ngữ",
-    "languages": {
-      "en": "English",
-      "sv": "Svenska",
-      "vi": "Tiếng Việt"
     }
   }
 }

@@ -5,8 +5,8 @@
   },
   "sections": {
     "whoami": {
-      "title": "Who am I?",
-      "content": "Hello, my name is Evan. I am a math teacher based in Sweden with a deep passion for computers, problem solving, and lifelong learning. Whether it's breaking down complex concepts or exploring new tech, I believe in one core principle: <strong>archive everything you see</strong>. Every challenge, every solution, every lesson, I treat it all as knowledge worth keeping and sharing. My goal is to help the next generation build not just skills, but a mindset ready for the world ahead."
+      "title": "About me",
+      "content": "I am a math teacher based in Sweden with a deep passion for computers, problem solving, and lifelong learning. Whether it's breaking down complex concepts or exploring new tech, I believe in one core principle: <strong>archive everything you see</strong>. Every challenge, every solution, every lesson, I treat it all as knowledge worth keeping and sharing. My goal is to help the next generation build not just skills, but a mindset ready for the world ahead."
     },
     "education": {
       "title": "Education",
@@ -17,31 +17,24 @@
     },
     "experience": {
       "title": "Experience",
-      "content": "Updating..."
+      "items": [
+        "Teacher",
+        {"items": [
+          "school A",
+          "school B"
+        ]},
+        "Property caretaker:",
+        "Customer Service"
+      ]
     },
     "project": {
-      "title": "Projects",
-      "content": "Making..."
+      "title": "Projects"
     },
     "cv": {
-      "title": "CV",
-      "content": "Coming soon...",
-      "links": [
-        { "text": "Swedish CV", "href": "#", "title": "Swedish CV" },
-        { "text": "English CV", "href": "#", "title": "English CV" },
-        { "text": "Vietnamese CV", "href": "#", "title": "Vietnamese CV" }
-      ]
+      "title": "CV"
     },
     "contact": {
       "title": "Contact"
-    }
-  },
-  "ui": {
-    "language_switcher": "Language",
-    "languages": {
-      "en": "English",
-      "sv": "Svenska",
-      "vi": "Tiếng Việt"
     }
   }
 }

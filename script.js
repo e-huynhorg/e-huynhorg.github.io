@@ -4,6 +4,7 @@ class LanguageManager {
     this.currentLang = 'en';
     this.fallbackLang = 'en';
     this.translations = {};
+    this.commonTranslations = {};
     this.loadedLanguages = new Set();
     
     // Initialize
@@ -11,6 +12,9 @@ class LanguageManager {
   }
   
   async init() {
+    // Load common translations first
+    await this.loadCommonTranslations();
+    
     // Get language from URL parameter, localStorage, or browser preference
     const urlParams = new URLSearchParams(window.location.search);
     const urlLang = urlParams.get('lang');
@@ -33,6 +37,21 @@ class LanguageManager {
     this.setupEmail();
   }
   
+  async loadCommonTranslations() {
+    try {
+      console.log('Loading common translations...');
+      const response = await fetch('lang/common.json');
+      if (response.ok) {
+        this.commonTranslations = await response.json();
+        console.log('Successfully loaded common translations:', this.commonTranslations);
+      } else {
+        console.warn('Failed to load common translations');
+      }
+    } catch (error) {
+      console.error('Error loading common translations:', error);
+    }
+  }
+
   async loadLanguage(lang) {
     if (this.loadedLanguages.has(lang)) {
       return;
@@ -91,10 +110,19 @@ class LanguageManager {
       return path.split('.').reduce((current, key) => current && current[key], obj);
     };
     
+    // Try language-specific translation first
     const text = getNestedValue(translation, key);
-    const fallbackText = getNestedValue(fallbackTranslation, key);
+    if (text) return text;
     
-    return text || fallbackText || key;
+    // Try fallback language translation
+    const fallbackText = getNestedValue(fallbackTranslation, key);
+    if (fallbackText) return fallbackText;
+    
+    // Try common translations
+    const commonText = getNestedValue(this.commonTranslations, key);
+    if (commonText) return commonText;
+    
+    return key;
   }
   
   updateContent() {
@@ -111,6 +139,9 @@ class LanguageManager {
     // Update education list
     this.updateEducationList();
     
+    // Update experience list
+    this.updateExperienceList();
+    
     // Update CV links
     this.updateCVLinks();
     
@@ -126,9 +157,45 @@ class LanguageManager {
     if (translation && translation.sections && translation.sections.education && translation.sections.education.items) {
       educationList.innerHTML = '';
       translation.sections.education.items.forEach(item => {
-        const li = document.createElement('li');
-        li.innerHTML = item;
-        educationList.appendChild(li);
+        if (typeof item === 'object' && item.items && Array.isArray(item.items)) {
+          // Handle subitems object
+          item.items.forEach(subitem => {
+            const subLi = document.createElement('li');
+            subLi.innerHTML = `&nbsp;&nbsp;&nbsp;&nbsp;• ${subitem}`;
+            subLi.style.listStyleType = 'none';
+            educationList.appendChild(subLi);
+          });
+        } else if (typeof item === 'string') {
+          // Handle regular string items
+          const li = document.createElement('li');
+          li.innerHTML = item;
+          educationList.appendChild(li);
+        }
+      });
+    }
+  }
+  
+  updateExperienceList() {
+    const experienceList = document.getElementById('experience-list');
+    const translation = this.translations[this.currentLang] || this.translations[this.fallbackLang];
+    
+    if (translation && translation.sections && translation.sections.experience && translation.sections.experience.items) {
+      experienceList.innerHTML = '';
+      translation.sections.experience.items.forEach(item => {
+        if (typeof item === 'object' && item.items && Array.isArray(item.items)) {
+          // Handle subitems object
+          item.items.forEach(subitem => {
+            const subLi = document.createElement('li');
+            subLi.innerHTML = `&nbsp;&nbsp;&nbsp;&nbsp;• ${subitem}`;
+            subLi.style.listStyleType = 'none';
+            experienceList.appendChild(subLi);
+          });
+        } else if (typeof item === 'string') {
+          // Handle regular string items
+          const li = document.createElement('li');
+          li.innerHTML = item;
+          experienceList.appendChild(li);
+        }
       });
     }
   }
@@ -137,9 +204,15 @@ class LanguageManager {
     const cvLinksContainer = document.getElementById('cv-links');
     const translation = this.translations[this.currentLang] || this.translations[this.fallbackLang];
     
-    if (translation && translation.sections && translation.sections.cv && translation.sections.cv.links) {
+    // Try language-specific translations first, then common translations
+    let cvSection = translation && translation.sections && translation.sections.cv;
+    if (!cvSection && this.commonTranslations && this.commonTranslations.sections) {
+      cvSection = this.commonTranslations.sections.cv;
+    }
+    
+    if (cvSection && cvSection.links) {
       cvLinksContainer.innerHTML = '';
-      translation.sections.cv.links.forEach(link => {
+      cvSection.links.forEach(link => {
         const a = document.createElement('a');
         a.href = link.href;
         a.title = link.title;
