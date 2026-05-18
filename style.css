@@ -1,0 +1,53 @@
+body {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  color: #222;
+  background: #fefefe;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  color: #0366d6;
+}
+
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.contact-icons img {
+  vertical-align: middle;
+  margin-left: 0.3rem;
+  width: 24px;
+  height: 24px;
+}
+
+.cv-links a {
+  margin-right: 1rem;
+}
+
+/* Language switcher styles */
+.language-switcher {
+  text-align: right;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.language-switcher select {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  color: #222;
+}
+
+/* Loading state */
+.loading {
+  opacity: 0.6;
+}

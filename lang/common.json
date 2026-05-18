@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "project": {
+      "content": "Making..."
+    },
+    "cv": {
+      "content": "Coming soon...",
+      "links": [
+        { "text": "English", "href": "#" },
+        { "text": "Svenska", "href": "#" },
+        { "text": "Tiếng Việt", "href": "#" }
+      ]
+    }
+  },
+  "ui": {
+    "language_switcher": "Language",
+    "languages": {
+      "en": "English",
+      "sv": "Svenska",
+      "vi": "Tiếng Việt"
+    }
+  }
+}
